@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUITester", "GUITester\GUIT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCOM.Core", "JCOM.Core\JCOM.Core.csproj", "{BAB65355-FF2E-4E31-9BE5-DE2C42C226C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCOM.OOSerializer", "JCOM.OOSerializer\JCOM.OOSerializer.csproj", "{6AD2FF66-13BB-43C2-AB65-2A8C26A98806}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCOM.Serializer", "JCOM.Serializer\JCOM.Serializer.csproj", "{6AD2FF66-13BB-43C2-AB65-2A8C26A98806}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -104,12 +104,6 @@
     <Compile Include="SerializationDefinitions.cs" />
     <Compile Include="SerializationTypeBinder.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Core\JCOM.Core.csproj">
-      <Project>{bab65355-ff2e-4e31-9be5-de2c42c226c1}</Project>
-      <Name>JCOM.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

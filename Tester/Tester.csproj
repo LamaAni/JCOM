@@ -57,13 +57,8 @@
     <Compile Include="Serialization\JsonPartialLoadNestedObject.cs" />
     <Compile Include="Serialization\JsonSimpleNestedObject.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Core\JCOM.Core.csproj">
-      <Project>{bab65355-ff2e-4e31-9be5-de2c42c226c1}</Project>
-      <Name>JCOM.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OOSerializer\JCOM.OOSerializer.csproj">
+    <ProjectReference Include="..\JCOM.OOSerializer\JCOM.OOSerializer.csproj">
       <Project>{6ad2ff66-13bb-43c2-ab65-2a8c26a98806}</Project>
       <Name>JCOM.OOSerializer</Name>
     </ProjectReference>

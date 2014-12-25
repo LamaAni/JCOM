@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using JCOM.Core.Strings;
-using JCOM.OOSerializer.Attributes;
-using JCOM.OOSerializer.Documents;
+using JCOM.Serializer.Attributes;
+using JCOM.Serializer.Documents;
 
 namespace Tester.Serialization
 {

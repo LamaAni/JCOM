@@ -15,7 +15,7 @@ namespace JCOM.Serializer
     /// <summary>
     /// A type mapping binder that creates holds type identities.
     /// </summary>
-    [XPressInheritedMemberSelection(XPressMemberSelectionType.OptIn)]
+    [JCOMInheritedMemberSelection(JCOMMemberSelectionType.OptIn)]
     public class SerializationTypeBinder<T>
     {
         public SerializationTypeBinder()

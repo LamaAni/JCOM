@@ -26,12 +26,12 @@ namespace JCOM.Serializer.Attributes
         public JCOMMemberAttribute(string name)
         {
             Name = name;
-            IgnoreMode = XPressIgnoreMode.IfNull | XPressIgnoreMode.IfDefualt;
+            IgnoreMode = JCOMIgnoreMode.IfNull | JCOMIgnoreMode.IfDefualt;
         }
 
         public string Name { get; set; }
         public bool IsRequired { get; set; }
         public int Order { get; set; }
-        public XPressIgnoreMode IgnoreMode { get; set; }
+        public JCOMIgnoreMode IgnoreMode { get; set; }
     }
 }

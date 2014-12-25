@@ -191,14 +191,14 @@ namespace JCOM.Serializer.Mapping
             Attributes.IMembersSelectionAttribute msa = null;
             if (Attribute.IsDefined(MappedType, typeof(Attributes.JCOMMemberSelectionAttribute)))
                 msa = Attribute.GetCustomAttribute(MappedType, typeof(Attributes.JCOMMemberSelectionAttribute)) as Attributes.JCOMMemberSelectionAttribute;
-            else if (Attribute.IsDefined(MappedType, typeof(Attributes.XPressInheritedMemberSelectionAttribute)))
-                msa = Attribute.GetCustomAttribute(MappedType, typeof(Attributes.XPressInheritedMemberSelectionAttribute)) as Attributes.XPressInheritedMemberSelectionAttribute;
+            else if (Attribute.IsDefined(MappedType, typeof(Attributes.JCOMInheritedMemberSelectionAttribute)))
+                msa = Attribute.GetCustomAttribute(MappedType, typeof(Attributes.JCOMInheritedMemberSelectionAttribute)) as Attributes.JCOMInheritedMemberSelectionAttribute;
 
             // creating defualt collections.
             IEnumerable<MemberInfo> autoSelect = new MemberInfo[0], optIn = new MemberInfo[0];
             IEnumerable<MemberInfo> allMembers = new MemberInfo[0];
-            Attributes.XPressMemberSelectionType selection = msa != null ? msa.Selection :
-                (MappedType.IsClass && !IsCompilerGeneratedClass ? Attributes.XPressMemberSelectionType.Properties : Attributes.XPressMemberSelectionType.Fields);
+            Attributes.JCOMMemberSelectionType selection = msa != null ? msa.Selection :
+                (MappedType.IsClass && !IsCompilerGeneratedClass ? Attributes.JCOMMemberSelectionType.Properties : Attributes.JCOMMemberSelectionType.Fields);
 
             // checing for .net serialization.
             if (MappedType.GetInterfaces().Any(i => typeof(ISerializable).IsAssignableFrom(i)))
@@ -238,14 +238,14 @@ namespace JCOM.Serializer.Mapping
                 .ToArray();
 
             // Getting auto select members.
-            if (!selection.HasFlag(Attributes.XPressMemberSelectionType.OptIn))
+            if (!selection.HasFlag(Attributes.JCOMMemberSelectionType.OptIn))
             {
                 autoSelect = allMembers.Except(optIn);
-                if (!selection.HasFlag(Attributes.XPressMemberSelectionType.Properties))
+                if (!selection.HasFlag(Attributes.JCOMMemberSelectionType.Properties))
                     autoSelect = autoSelect.Where(mi => !(mi is PropertyInfo));
-                if (!selection.HasFlag(Attributes.XPressMemberSelectionType.Fields))
+                if (!selection.HasFlag(Attributes.JCOMMemberSelectionType.Fields))
                     autoSelect = autoSelect.Where(mi => !(mi is FieldInfo));
-                if (!selection.HasFlag(Attributes.XPressMemberSelectionType.ReadOnlyProperties))
+                if (!selection.HasFlag(Attributes.JCOMMemberSelectionType.ReadOnlyProperties))
                     autoSelect = autoSelect.Where(mi =>
                     {
                         PropertyInfo pi = mi as PropertyInfo;
@@ -259,7 +259,7 @@ namespace JCOM.Serializer.Mapping
 
             // getting all the relevant map infos for this type.
             IEnumerable<MemberMapInfo> mapInfos =
-                autoSelect.Concat(optIn).Select(mi => MemberMapInfo.Get(mi)).Where(mi => !mi.IgnoreMode.HasFlag(Attributes.XPressIgnoreMode.NeverIncluded)).ToArray();
+                autoSelect.Concat(optIn).Select(mi => MemberMapInfo.Get(mi)).Where(mi => !mi.IgnoreMode.HasFlag(Attributes.JCOMIgnoreMode.NeverIncluded)).ToArray();
 
             // adding all names.
             memberNamesTaken.UnionWith(mapInfos.Select(mi => mi.Name));
@@ -294,7 +294,7 @@ namespace JCOM.Serializer.Mapping
                 }
             });
 
-            writeableMembers = members.Where(mmi => mmi.Required || !mmi.IgnoreMode.HasFlag(Attributes.XPressIgnoreMode.NeverIncluded)).ToArray();
+            writeableMembers = members.Where(mmi => mmi.Required || !mmi.IgnoreMode.HasFlag(Attributes.JCOMIgnoreMode.NeverIncluded)).ToArray();
 
             _MembersByName=new Dictionary<string,MemberMapInfo>();
             members.ForEach(mmi =>
@@ -306,5 +306,5 @@ namespace JCOM.Serializer.Mapping
         #endregion
     }
 
-    public enum XPressSerialziationType { Object, Dictionary, Array };
+    public enum JCOMSerialziationType { Object, Dictionary, Array };
 }

@@ -19,7 +19,7 @@ namespace JCOM.Serializer.Mapping
         public MemberMapInfo(MemberInfo mi)
         {
             MemberInfo = mi;
-            IgnoreMode = XPressIgnoreMode.IfNull;
+            IgnoreMode = JCOMIgnoreMode.IfNull;
             Map();
         }
 
@@ -65,7 +65,7 @@ namespace JCOM.Serializer.Mapping
         /// <summary>
         /// If null dont ever ignore.
         /// </summary>
-        public Attributes.XPressIgnoreMode IgnoreMode { get; private set; }
+        public Attributes.JCOMIgnoreMode IgnoreMode { get; private set; }
 
         /// <summary>
         /// If true this field is required.
@@ -107,7 +107,7 @@ namespace JCOM.Serializer.Mapping
             Name = MemberInfo.Name[0] != '<' ? MemberInfo.Name : MemberInfo.Name.Substring(1, MemberInfo.Name.IndexOf('>', 1) - 1);
             Order = int.MaxValue;
             Required = false;
-            IgnoreMode = XPressIgnoreMode.IfNull | XPressIgnoreMode.IfDefualt;
+            IgnoreMode = JCOMIgnoreMode.IfNull | JCOMIgnoreMode.IfDefualt;
             DefaultValue = null;
             IsProperty = MemberInfo is PropertyInfo;
             IsReadOnly = IsProperty && !(MemberInfo as PropertyInfo).CanWrite;
@@ -118,7 +118,7 @@ namespace JCOM.Serializer.Mapping
             if (Attribute.IsDefined(MemberInfo, typeof(DefaultValueAttribute)))
                 DefaultValue = Attribute.GetCustomAttribute(MemberInfo, typeof(DefaultValueAttribute)) as DefaultValueAttribute;
 
-            // checking for XPressMember
+            // checking for JCOMMember
             if (Attribute.IsDefined(MemberInfo, typeof(Attributes.JCOMMemberAttribute)))
             {
                 JCOMMemberAttribute atr = Attribute.GetCustomAttribute(MemberInfo, typeof(Attributes.JCOMMemberAttribute)) as JCOMMemberAttribute;
@@ -131,7 +131,7 @@ namespace JCOM.Serializer.Mapping
             {
                 DataMemberAttribute atr = Attribute.GetCustomAttribute(MemberInfo, typeof(DataMemberAttribute)) as DataMemberAttribute;
                 if (atr.EmitDefaultValue)
-                    IgnoreMode = XPressIgnoreMode.IfDefualt;
+                    IgnoreMode = JCOMIgnoreMode.IfDefualt;
                 if (atr.Name != null) Name = atr.Name;
                 Order = atr.Order;
                 Required = atr.IsRequired;
@@ -143,7 +143,7 @@ namespace JCOM.Serializer.Mapping
             }
             else if (Attribute.IsDefined(MemberInfo, typeof(NonSerializedAttribute)) || Attribute.IsDefined(MemberInfo, typeof(IgnoreDataMemberAttribute)))
             {
-                IgnoreMode = XPressIgnoreMode.NeverIncluded;
+                IgnoreMode = JCOMIgnoreMode.NeverIncluded;
             }
 
             if (IsProperty)

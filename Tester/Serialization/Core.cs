@@ -1,4 +1,4 @@
-﻿using JCOM.OOSerializer.Javascript;
+﻿using JCOM.Serializer.Javascript;
 using JCOM.Runtime;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;

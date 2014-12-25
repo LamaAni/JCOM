@@ -8,7 +8,7 @@ namespace JCOM.Serializer.Attributes
 {
     internal interface IMembersSelectionAttribute
     {
-        XPressMemberSelectionType Selection { get; set; }
+        JCOMMemberSelectionType Selection { get; set; }
     }
 
     /// <summary>
@@ -16,14 +16,14 @@ namespace JCOM.Serializer.Attributes
     /// members are added. Dose not affect the base class.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = false)]
-    public sealed class XPressInheritedMemberSelectionAttribute : Attribute, IMembersSelectionAttribute
+    public sealed class JCOMInheritedMemberSelectionAttribute : Attribute, IMembersSelectionAttribute
     {
         /// <summary>
         /// Set the member selection type of the current, if the OptIn is selected then only specifically defined
         /// members are added. DOSE NOT AFFECT THE BASE CLASS!
         /// </summary>
         /// <param name="selection"></param>
-        public XPressInheritedMemberSelectionAttribute(XPressMemberSelectionType selection = XPressMemberSelectionType.Properties)
+        public JCOMInheritedMemberSelectionAttribute(JCOMMemberSelectionType selection = JCOMMemberSelectionType.Properties)
         {
             Selection = selection;
         }
@@ -31,13 +31,13 @@ namespace JCOM.Serializer.Attributes
         /// <summary>
         /// The selection type for the current members.
         /// </summary>
-        public XPressMemberSelectionType Selection { get; set; }
+        public JCOMMemberSelectionType Selection { get; set; }
     }
 
     /// <summary>
     /// Set the member selection type of the current, if the OptIn is selected then only specifically defined
     /// members are added. Affectes only the declared class (is not inherited by derived classes). Trumps any decleration
-    /// of XPressMemberSelectionAttribute. Use XPressInheritedMemberSelectionAttribute for inherited member selection.
+    /// of JCOMMemberSelectionAttribute. Use JCOMInheritedMemberSelectionAttribute for inherited member selection.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
     public sealed class JCOMMemberSelectionAttribute : Attribute, IMembersSelectionAttribute
@@ -45,10 +45,10 @@ namespace JCOM.Serializer.Attributes
         /// <summary>
         /// Set the member selection type of the current, if the OptIn is selected then only specifically defined
         /// members are added. Affectes only the declared class (is not inherited by derived classes). Trumps any decleration
-        /// of XPressMemberSelectionAttribute.
+        /// of JCOMMemberSelectionAttribute.
         /// </summary>
         /// <param name="selection"></param>
-        public JCOMMemberSelectionAttribute(XPressMemberSelectionType selection = XPressMemberSelectionType.Properties)
+        public JCOMMemberSelectionAttribute(JCOMMemberSelectionType selection = JCOMMemberSelectionType.Properties)
         {
             Selection = selection;
         }
@@ -56,12 +56,12 @@ namespace JCOM.Serializer.Attributes
         /// <summary>
         /// The selection type for the current members.
         /// </summary>
-        public XPressMemberSelectionType Selection { get; set; }
+        public JCOMMemberSelectionType Selection { get; set; }
     }
 
     /// <summary>
     /// Determiens which members to select.
     /// </summary>
     [Flags]
-    public enum XPressMemberSelectionType { Fields = 1, Properties = 2, ReadOnlyProperties = 4, OptIn = 8 }
+    public enum JCOMMemberSelectionType { Fields = 1, Properties = 2, ReadOnlyProperties = 4, OptIn = 8 }
 }

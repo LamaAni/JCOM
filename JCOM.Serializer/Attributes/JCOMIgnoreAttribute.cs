@@ -16,7 +16,7 @@ namespace JCOM.Serializer.Attributes
         /// Sets when to ignore.
         /// </summary>
         /// <param name="ignoreMode">In what mode to ignore the value</param>
-        public JCOMIgnoreAttribute(XPressIgnoreMode ignoreMode = XPressIgnoreMode.NeverIncluded)
+        public JCOMIgnoreAttribute(JCOMIgnoreMode ignoreMode = JCOMIgnoreMode.NeverIncluded)
         {
             IgnoreMode = ignoreMode;
         }
@@ -24,14 +24,14 @@ namespace JCOM.Serializer.Attributes
         /// <summary>
         /// The ignore mode to assign to the property or field.
         /// </summary>
-        public XPressIgnoreMode IgnoreMode { get; set; }
+        public JCOMIgnoreMode IgnoreMode { get; set; }
 
         /// <summary>
         /// Returns true if the ignore mode dose not include always.
         /// </summary>
-        public bool IsIncluded { get { return (IgnoreMode & XPressIgnoreMode.NeverIncluded) != XPressIgnoreMode.NeverIncluded; } }
+        public bool IsIncluded { get { return (IgnoreMode & JCOMIgnoreMode.NeverIncluded) != JCOMIgnoreMode.NeverIncluded; } }
     }
 
     [Flags]
-    public enum XPressIgnoreMode { IfNull = 1, IfDefualt = 2, NeverIncluded = 4, NeverIgnored = 8 }
+    public enum JCOMIgnoreMode { IfNull = 1, IfDefualt = 2, NeverIncluded = 4, NeverIgnored = 8 }
 }

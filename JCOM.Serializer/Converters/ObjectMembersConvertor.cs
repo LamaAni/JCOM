@@ -17,11 +17,11 @@ namespace JCOM.Serializer.Converters
             {
                 object oval = mmi.Getter(o);
 
-                if (!mmi.Required && !mmi.IgnoreMode.HasFlag(Attributes.XPressIgnoreMode.NeverIgnored))
+                if (!mmi.Required && !mmi.IgnoreMode.HasFlag(Attributes.JCOMIgnoreMode.NeverIgnored))
                 {
-                    if (mmi.IgnoreMode.HasFlag(Attributes.XPressIgnoreMode.IfNull) && oval == null)
+                    if (mmi.IgnoreMode.HasFlag(Attributes.JCOMIgnoreMode.IfNull) && oval == null)
                         return;
-                    if (mmi.IgnoreMode.HasFlag(Attributes.XPressIgnoreMode.IfDefualt) && mmi.DefaultValue != null && mmi.DefaultValue.Value.Equals(oval))
+                    if (mmi.IgnoreMode.HasFlag(Attributes.JCOMIgnoreMode.IfDefualt) && mmi.DefaultValue != null && mmi.DefaultValue.Value.Equals(oval))
                         return;
                 }
                 IJsonValue<T> nv = context.GetJsonValue(mmi.Name, typeof(string));
@@ -58,7 +58,7 @@ namespace JCOM.Serializer.Converters
                 {
                     if (mmi.Required)
                         throw new Exception("Required field not found in stream");
-                    if (mmi.DefaultValue != null && mmi.IgnoreMode.HasFlag(Attributes.XPressIgnoreMode.IfDefualt))
+                    if (mmi.DefaultValue != null && mmi.IgnoreMode.HasFlag(Attributes.JCOMIgnoreMode.IfDefualt))
                         try
                         {
                             mmi.Setter(o, mmi.DefaultValue.Value);

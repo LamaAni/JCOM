@@ -1,12 +1,12 @@
-﻿using JCOM.OOSerializer.Documents;
+﻿using JCOM.Serializer.Documents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JCOM.OOSerializer.Mapping;
+using JCOM.Serializer.Mapping;
 
-namespace JCOM.OOSerializer
+namespace JCOM.Serializer
 {
     /// <summary>
     /// A collection of mehtods that allow the generation of a serialization context.
@@ -109,7 +109,7 @@ namespace JCOM.OOSerializer
             {
                 if (this.Binder == null)
                 {
-                    return typeof(JCOM.OOSerializer.Parsers.TypeParser<T>.UnknownType);
+                    return typeof(JCOM.Serializer.Parsers.TypeParser<T>.UnknownType);
                 }
                 else
                 {

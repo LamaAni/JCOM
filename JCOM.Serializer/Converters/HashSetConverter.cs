@@ -1,4 +1,4 @@
-﻿using JCOM.OOSerializer.Documents;
+﻿using JCOM.Serializer.Documents;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,9 +6,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using JCOM.OOSerializer.Mapping;
+using JCOM.Serializer.Mapping;
 
-namespace JCOM.OOSerializer.Converters
+namespace JCOM.Serializer.Converters
 {
     public class HashSetConverter<T> : JsonObjectConverter<T, IEnumerable, JsonArray<T>>
     {

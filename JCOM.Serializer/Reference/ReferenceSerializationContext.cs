@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JCOM.OOSerializer.Documents;
-using JCOM.OOSerializer.Mapping;
+using JCOM.Serializer.Documents;
+using JCOM.Serializer.Mapping;
 
-namespace JCOM.OOSerializer.Reference
+namespace JCOM.Serializer.Reference
 {
     /// <summary>
     /// A refrence enabled serialization context where refrences are loaded as serialization values.

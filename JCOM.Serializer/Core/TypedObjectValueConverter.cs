@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Core
+namespace JCOM.Serializer.Core
 {
     /// <summary>
     /// A typed object converter, to convert C# objects into json.

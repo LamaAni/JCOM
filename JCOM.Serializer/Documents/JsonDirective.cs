@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Documents
+namespace JCOM.Serializer.Documents
 {
     /// <summary>
     /// Represents a json directive value that may have a specific directive and then value in the same line.

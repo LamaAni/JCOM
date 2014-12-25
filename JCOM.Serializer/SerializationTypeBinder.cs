@@ -6,11 +6,11 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using JCOM.OOSerializer.Documents;
-using JCOM.OOSerializer.Attributes;
-using JCOM.OOSerializer.Mapping;
+using JCOM.Serializer.Documents;
+using JCOM.Serializer.Attributes;
+using JCOM.Serializer.Mapping;
 
-namespace JCOM.OOSerializer
+namespace JCOM.Serializer
 {
     /// <summary>
     /// A type mapping binder that creates holds type identities.

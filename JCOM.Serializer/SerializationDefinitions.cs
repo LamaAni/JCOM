@@ -1,4 +1,4 @@
-﻿using JCOM.OOSerializer.Documents;
+﻿using JCOM.Serializer.Documents;
 using System;
 using System.Collections;
 using System.Collections.Concurrent;
@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer
+namespace JCOM.Serializer
 {
     /// <summary>
     /// Represents a collection of thisinitions that determine the way the objects are serialzied.

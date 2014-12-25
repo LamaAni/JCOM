@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer
+namespace JCOM.Serializer
 {
     /// <summary>
     /// Implements an interface for serializaing json objects that allows for the objects to implement a specific serialization scheme. 

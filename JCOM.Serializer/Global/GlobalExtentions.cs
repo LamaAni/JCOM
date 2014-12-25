@@ -1,7 +1,7 @@
 ﻿
-using JCOM.OOSerializer.Documents;
-using JCOM.OOSerializer.Javascript;
-using JCOM.OOSerializer.Reference;
+using JCOM.Serializer.Documents;
+using JCOM.Serializer.Javascript;
+using JCOM.Serializer.Reference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +23,7 @@ public static partial class JCOM_OOSerializer_GlobalExtentions
             false)
 #endif
     {
-        return JCOM.OOSerializer.Javascript.JsonStringSerializer.Global.Serialize(o, true, isPreety);
+        return JCOM.Serializer.Javascript.JsonStringSerializer.Global.Serialize(o, true, isPreety);
     }
 
     /// <summary>
@@ -34,7 +34,7 @@ public static partial class JCOM_OOSerializer_GlobalExtentions
     /// <returns></returns>
     public static T FromJson<T>(this string source)
     {
-        return JCOM.OOSerializer.Javascript.JsonStringSerializer.Global.Deserialize<T>(source, true);
+        return JCOM.Serializer.Javascript.JsonStringSerializer.Global.Deserialize<T>(source, true);
     }
 
     /// <summary>
@@ -45,7 +45,7 @@ public static partial class JCOM_OOSerializer_GlobalExtentions
     /// <returns></returns>
     public static T FromJson<T>(this IJsonValue<string> val)
     {
-        return JCOM.OOSerializer.Javascript.JsonStringSerializer.Global.Deserialize<T>(val, true);
+        return JCOM.Serializer.Javascript.JsonStringSerializer.Global.Deserialize<T>(val, true);
     }
 
     /// <summary>
@@ -56,7 +56,7 @@ public static partial class JCOM_OOSerializer_GlobalExtentions
     /// <returns></returns>
     public static object FromJson(this string source, Type t)
     {
-        return JCOM.OOSerializer.Javascript.JsonStringSerializer.Global.Deserialize(source, t, true);
+        return JCOM.Serializer.Javascript.JsonStringSerializer.Global.Deserialize(source, t, true);
     }
 
     /// <summary>
@@ -67,7 +67,7 @@ public static partial class JCOM_OOSerializer_GlobalExtentions
     /// <returns></returns>
     public static object FromJson(this IJsonValue<string> val, Type t)
     {
-        return JCOM.OOSerializer.Javascript.JsonStringSerializer.Global.Deserialize(val, t, true);
+        return JCOM.Serializer.Javascript.JsonStringSerializer.Global.Deserialize(val, t, true);
     }
 
     /// <summary>

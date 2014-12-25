@@ -1,4 +1,4 @@
-﻿using JCOM.OOSerializer.Documents;
+﻿using JCOM.Serializer.Documents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using JCOM.Core.Strings;
 
-namespace JCOM.OOSerializer.Core.JavscriptJson
+namespace JCOM.Serializer.Core.JavscriptJson
 {
     /// <summary>
     /// A static class that holds the default definitions for json string rmc.

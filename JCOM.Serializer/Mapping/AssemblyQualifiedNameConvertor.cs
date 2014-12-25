@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Mapping
+namespace JCOM.Serializer.Mapping
 {
     /// <summary>
     /// Implements a basic type convertor that allows for conversion to and from type names.

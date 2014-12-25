@@ -1,12 +1,12 @@
-﻿using JCOM.OOSerializer.Core;
-using JCOM.OOSerializer.Documents;
+﻿using JCOM.Serializer.Core;
+using JCOM.Serializer.Documents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Reference
+namespace JCOM.Serializer.Reference
 {
     /// <summary>
     /// Implements a refrence json serializer. The refrence serializer controls the refrence value

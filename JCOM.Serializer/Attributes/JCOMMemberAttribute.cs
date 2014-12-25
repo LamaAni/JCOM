@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Attributes
+namespace JCOM.Serializer.Attributes
 {
     /// <summary>
     /// Defines this value as a serializeable member of the current type.

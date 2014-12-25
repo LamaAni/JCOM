@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Documents
+namespace JCOM.Serializer.Documents
 {
     /// <summary>
     /// The number as a mutable string object.

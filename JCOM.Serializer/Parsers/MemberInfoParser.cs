@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Parsers
+namespace JCOM.Serializer.Parsers
 {
     public class MemberInfoParser<T> : JsonObjectParser<T,MemberInfo>
     {

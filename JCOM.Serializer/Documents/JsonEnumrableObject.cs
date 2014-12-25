@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Documents
+namespace JCOM.Serializer.Documents
 {
     /// <summary>
     /// Represents a general json list value.

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Documents
+namespace JCOM.Serializer.Documents
 {
     /// <summary>
     /// Implements a json object. Members are loaded into the collection.

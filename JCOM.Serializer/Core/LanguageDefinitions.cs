@@ -1,11 +1,11 @@
-﻿using JCOM.OOSerializer.Documents;
+﻿using JCOM.Serializer.Documents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Core
+namespace JCOM.Serializer.Core
 {
     /// <summary>
     /// Launguage definitions that apply to a stream. 

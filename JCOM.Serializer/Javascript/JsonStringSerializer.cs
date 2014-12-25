@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Javascript
+namespace JCOM.Serializer.Javascript
 {
     public class JsonStringSerializer : JsonSerializer<char, string>
     {

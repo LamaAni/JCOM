@@ -7,8 +7,8 @@
     <ProjectGuid>{6AD2FF66-13BB-43C2-AB65-2A8C26A98806}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JCOM.OOSerializer</RootNamespace>
-    <AssemblyName>JCOM.OOSerializer</AssemblyName>
+    <RootNamespace>JCOM.Serializer</RootNamespace>
+    <AssemblyName>JCOM.Serializer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -103,6 +103,12 @@
     <Compile Include="SerializationContext.cs" />
     <Compile Include="SerializationDefinitions.cs" />
     <Compile Include="SerializationTypeBinder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JCOM.Core\JCOM.Core.csproj">
+      <Project>{bab65355-ff2e-4e31-9be5-de2c42c226c1}</Project>
+      <Name>JCOM.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

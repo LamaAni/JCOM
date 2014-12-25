@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Core.JavscriptJson
+namespace JCOM.Serializer.Core.JavscriptJson
 {
     public class JsonStringWriter : JsonWriter<char, string>
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Core
+namespace JCOM.Serializer.Core
 {
     /// <summary>
     /// Implements a json value converter that allows converting json specific values.

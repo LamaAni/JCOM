@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JCOM.OOSerializer.Reference;
+using JCOM.Serializer.Reference;
 
-namespace JCOM.OOSerializer.Javascript
+namespace JCOM.Serializer.Javascript
 {
     public class JsonStringRefrenceBank : JsonRefrenceBank<string>
     {

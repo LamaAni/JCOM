@@ -1,11 +1,11 @@
-﻿using JCOM.OOSerializer.Documents;
+﻿using JCOM.Serializer.Documents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Reference
+namespace JCOM.Serializer.Reference
 {
     /// <summary>
     /// Provides an interface for creating a json data provider that gets/sets the json values by id.

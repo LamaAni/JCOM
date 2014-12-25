@@ -7,9 +7,9 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-using JCOM.OOSerializer.Documents;
+using JCOM.Serializer.Documents;
 
-namespace JCOM.OOSerializer.Mapping
+namespace JCOM.Serializer.Mapping
 {
     public class TypeMapInfo
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Attributes
+namespace JCOM.Serializer.Attributes
 {
     internal interface IMembersSelectionAttribute
     {

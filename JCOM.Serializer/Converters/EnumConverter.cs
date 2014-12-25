@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JCOM.OOSerializer.Documents;
+using JCOM.Serializer.Documents;
 
-namespace JCOM.OOSerializer.Converters
+namespace JCOM.Serializer.Converters
 {
     /// <summary>
     /// Implements a simple string converter for enum types.

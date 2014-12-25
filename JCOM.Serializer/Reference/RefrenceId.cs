@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Reference
+namespace JCOM.Serializer.Reference
 {
     public class RefrenceId
     {

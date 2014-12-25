@@ -7,9 +7,9 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
-using JCOM.OOSerializer.Attributes;
+using JCOM.Serializer.Attributes;
 
-namespace JCOM.OOSerializer.Mapping
+namespace JCOM.Serializer.Mapping
 {
     /// <summary>
     /// Holds information about the rendering of the sepecified member.

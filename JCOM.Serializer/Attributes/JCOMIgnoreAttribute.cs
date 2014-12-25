@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Attributes
+namespace JCOM.Serializer.Attributes
 {
     /// <summary>
     /// Sets when to ignore the field/property

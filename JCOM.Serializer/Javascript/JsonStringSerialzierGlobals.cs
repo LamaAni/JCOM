@@ -1,4 +1,4 @@
-﻿using JCOM.OOSerializer.Documents;
+﻿using JCOM.Serializer.Documents;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Javascript
+namespace JCOM.Serializer.Javascript
 {
     /// <summary>
     /// A collection of global values that apply to the string json serialzier.

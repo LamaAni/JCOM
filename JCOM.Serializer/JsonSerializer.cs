@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using JCOM.OOSerializer.Core;
-using JCOM.OOSerializer.Documents;
-using JCOM.OOSerializer.Mapping;
+using JCOM.Serializer.Core;
+using JCOM.Serializer.Documents;
+using JCOM.Serializer.Mapping;
 
-namespace JCOM.OOSerializer
+namespace JCOM.Serializer
 {
     /// <summary>
     /// Implements a object to json and object from json serializer.

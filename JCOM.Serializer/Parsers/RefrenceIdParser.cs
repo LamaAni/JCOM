@@ -1,12 +1,12 @@
-﻿using JCOM.OOSerializer.Documents;
-using JCOM.OOSerializer.Reference;
+﻿using JCOM.Serializer.Documents;
+using JCOM.Serializer.Reference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Parsers
+namespace JCOM.Serializer.Parsers
 {
     /// <summary>
     /// Implementds a refrence id parser.

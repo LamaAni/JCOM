@@ -1,4 +1,4 @@
-﻿using JCOM.OOSerializer.Documents;
+﻿using JCOM.Serializer.Documents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Reference
+namespace JCOM.Serializer.Reference
 {
     /// <summary>
     /// Implements a refrence json collection that maps the json object to json id.

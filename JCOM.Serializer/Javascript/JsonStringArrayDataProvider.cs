@@ -1,14 +1,14 @@
-﻿using JCOM.OOSerializer.Reference;
+﻿using JCOM.Serializer.Reference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using JCOM.Core.Strings;
-using JCOM.OOSerializer;
+using JCOM.Serializer;
 using JCOM.Runtime;
 
-namespace JCOM.OOSerializer.Javascript
+namespace JCOM.Serializer.Javascript
 {
     public class JsonStringArrayDataProvider : JsonMemoryArrayDataProvider<string>
     {

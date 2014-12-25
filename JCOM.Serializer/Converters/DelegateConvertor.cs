@@ -4,10 +4,10 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using JCOM.OOSerializer.Documents;
-using JCOM.OOSerializer.Mapping;
+using JCOM.Serializer.Documents;
+using JCOM.Serializer.Mapping;
 
-namespace JCOM.OOSerializer.Converters
+namespace JCOM.Serializer.Converters
 {
     public class DelegateConvertor<T> : JsonObjectConverter<T, Delegate, JsonArray<T>>
     {

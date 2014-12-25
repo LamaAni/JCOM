@@ -1,13 +1,13 @@
-﻿using JCOM.OOSerializer.Core;
-using JCOM.OOSerializer.Documents;
-using JCOM.OOSerializer.Mapping;
+﻿using JCOM.Serializer.Core;
+using JCOM.Serializer.Documents;
+using JCOM.Serializer.Mapping;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JCOM.OOSerializer.Mapping
+namespace JCOM.Serializer.Mapping
 {
     /// <summary>
     /// Holds information about a speicific serialization type Mapping.

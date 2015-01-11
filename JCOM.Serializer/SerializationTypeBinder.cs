@@ -26,7 +26,7 @@ namespace JCOM.Serializer
         Dictionary<uint, Type> m_idToType = new Dictionary<uint, Type>();
         Dictionary<Type, uint> m_typeToId = new Dictionary<Type, uint>();
 
-        [JCOMMember("typeinfo")]
+        [JMember("typeinfo")]
         /// <summary>
         /// Local write value member that writes the data members and loads the data members from the dictionaries.
         /// </summary>
@@ -61,7 +61,7 @@ namespace JCOM.Serializer
         /// </summary>
         public int TypeCount { get { return m_idToType.Count; } }
 
-        [JCOMMember("cid")]
+        [JMember("cid")]
         uint curId = 0;
 
         /// <summary>

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCOM.Core", "JCOM.Core\JCOM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCOM.Serializer", "JCOM.Serializer\JCOM.Serializer.csproj", "{6AD2FF66-13BB-43C2-AB65-2A8C26A98806}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCOM.Refractor", "JCOM.Refractor\JCOM.Refractor.csproj", "{1733FA06-A604-4818-BA7C-84A2EB4153EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,16 @@ Global
 		{6AD2FF66-13BB-43C2-AB65-2A8C26A98806}.Release|ARM.ActiveCfg = Release|Any CPU
 		{6AD2FF66-13BB-43C2-AB65-2A8C26A98806}.Release|x64.ActiveCfg = Release|Any CPU
 		{6AD2FF66-13BB-43C2-AB65-2A8C26A98806}.Release|x86.ActiveCfg = Release|Any CPU
+		{1733FA06-A604-4818-BA7C-84A2EB4153EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1733FA06-A604-4818-BA7C-84A2EB4153EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1733FA06-A604-4818-BA7C-84A2EB4153EF}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{1733FA06-A604-4818-BA7C-84A2EB4153EF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1733FA06-A604-4818-BA7C-84A2EB4153EF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1733FA06-A604-4818-BA7C-84A2EB4153EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1733FA06-A604-4818-BA7C-84A2EB4153EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1733FA06-A604-4818-BA7C-84A2EB4153EF}.Release|ARM.ActiveCfg = Release|Any CPU
+		{1733FA06-A604-4818-BA7C-84A2EB4153EF}.Release|x64.ActiveCfg = Release|Any CPU
+		{1733FA06-A604-4818-BA7C-84A2EB4153EF}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

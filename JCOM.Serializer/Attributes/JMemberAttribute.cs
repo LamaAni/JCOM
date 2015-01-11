@@ -11,19 +11,19 @@ namespace JCOM.Serializer.Attributes
     /// (Similar to DataMember)
     /// </summary>
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
-    public sealed class JCOMMemberAttribute : Attribute
+    public sealed class JMemberAttribute : Attribute
     {
         /// <summary>
         /// Defines this value as member of the current type.
         /// (Similar to DataMember)
         /// </summary>
         /// <param name="name"></param>
-        public JCOMMemberAttribute()
+        public JMemberAttribute()
             :this(null)
         {
         }
 
-        public JCOMMemberAttribute(string name)
+        public JMemberAttribute(string name)
         {
             Name = name;
             IgnoreMode = JCOMIgnoreMode.IfNull | JCOMIgnoreMode.IfDefualt;

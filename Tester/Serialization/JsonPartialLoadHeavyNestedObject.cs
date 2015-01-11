@@ -35,10 +35,10 @@ namespace Tester.Serialization
         public string RandomString { get; private set; }
         public int Index { get; private set; }
 
-        [JCOMMember]
+        [JMember]
         private PostDeserialize<List<JsonPartialLoadHeavyNestedObject>> m_internal;
 
-        [JCOMIgnore]
+        [JIgnoreAttribute]
         /// <summary>
         /// A post deserialzed internal
         /// </summary>

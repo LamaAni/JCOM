@@ -189,8 +189,8 @@ namespace JCOM.Serializer.Mapping
 
             // get the member selection attribute, associated with the current.
             Attributes.IMembersSelectionAttribute msa = null;
-            if (Attribute.IsDefined(MappedType, typeof(Attributes.JCOMMemberSelectionAttribute)))
-                msa = Attribute.GetCustomAttribute(MappedType, typeof(Attributes.JCOMMemberSelectionAttribute)) as Attributes.JCOMMemberSelectionAttribute;
+            if (Attribute.IsDefined(MappedType, typeof(Attributes.JMemberSelectionAttribute)))
+                msa = Attribute.GetCustomAttribute(MappedType, typeof(Attributes.JMemberSelectionAttribute)) as Attributes.JMemberSelectionAttribute;
             else if (Attribute.IsDefined(MappedType, typeof(Attributes.JCOMInheritedMemberSelectionAttribute)))
                 msa = Attribute.GetCustomAttribute(MappedType, typeof(Attributes.JCOMInheritedMemberSelectionAttribute)) as Attributes.JCOMInheritedMemberSelectionAttribute;
 
@@ -234,7 +234,7 @@ namespace JCOM.Serializer.Mapping
                 .ToArray();
 
             optIn = allMembers
-                .Where(mi => Attribute.IsDefined(mi, typeof(Attributes.JCOMMemberAttribute)) || Attribute.IsDefined(mi, typeof(System.Runtime.Serialization.DataMemberAttribute)))
+                .Where(mi => Attribute.IsDefined(mi, typeof(Attributes.JMemberAttribute)) || Attribute.IsDefined(mi, typeof(System.Runtime.Serialization.DataMemberAttribute)))
                 .ToArray();
 
             // Getting auto select members.

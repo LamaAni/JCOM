@@ -119,9 +119,9 @@ namespace JCOM.Serializer.Mapping
                 DefaultValue = Attribute.GetCustomAttribute(MemberInfo, typeof(DefaultValueAttribute)) as DefaultValueAttribute;
 
             // checking for JCOMMember
-            if (Attribute.IsDefined(MemberInfo, typeof(Attributes.JCOMMemberAttribute)))
+            if (Attribute.IsDefined(MemberInfo, typeof(Attributes.JMemberAttribute)))
             {
-                JCOMMemberAttribute atr = Attribute.GetCustomAttribute(MemberInfo, typeof(Attributes.JCOMMemberAttribute)) as JCOMMemberAttribute;
+                JMemberAttribute atr = Attribute.GetCustomAttribute(MemberInfo, typeof(Attributes.JMemberAttribute)) as JMemberAttribute;
                 IgnoreMode = atr.IgnoreMode;
                 if (atr.Name != null) Name = atr.Name;
                 Order = atr.Order;
@@ -136,9 +136,9 @@ namespace JCOM.Serializer.Mapping
                 Order = atr.Order;
                 Required = atr.IsRequired;
             }
-            else if (Attribute.IsDefined(MemberInfo, typeof(JCOMIgnoreAttribute)))
+            else if (Attribute.IsDefined(MemberInfo, typeof(JIgnoreAttribute)))
             {
-                JCOMIgnoreAttribute ignore = Attribute.GetCustomAttribute(MemberInfo, typeof(JCOMIgnoreAttribute)) as JCOMIgnoreAttribute;
+                JIgnoreAttribute ignore = Attribute.GetCustomAttribute(MemberInfo, typeof(JIgnoreAttribute)) as JIgnoreAttribute;
                 IgnoreMode = ignore.IgnoreMode;
             }
             else if (Attribute.IsDefined(MemberInfo, typeof(NonSerializedAttribute)) || Attribute.IsDefined(MemberInfo, typeof(IgnoreDataMemberAttribute)))

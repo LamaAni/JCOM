@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\JCOMIgnoreAttribute.cs" />
-    <Compile Include="Attributes\JCOMMemberAttribute.cs" />
-    <Compile Include="Attributes\JCOMMemberSelectionAttribute.cs" />
+    <Compile Include="Attributes\JIgnoreAttribute.cs" />
+    <Compile Include="Attributes\JMemberAttribute.cs" />
+    <Compile Include="Attributes\JMemberSelectionAttribute.cs" />
     <Compile Include="Converters\ArrayConverter.cs" />
     <Compile Include="Converters\DelegateConvertor.cs" />
     <Compile Include="Converters\DictionaryConverter.cs" />

@@ -40,7 +40,7 @@ namespace JCOM.Serializer.Attributes
     /// of JCOMMemberSelectionAttribute. Use JCOMInheritedMemberSelectionAttribute for inherited member selection.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = false)]
-    public sealed class JCOMMemberSelectionAttribute : Attribute, IMembersSelectionAttribute
+    public sealed class JMemberSelectionAttribute : Attribute, IMembersSelectionAttribute
     {
         /// <summary>
         /// Set the member selection type of the current, if the OptIn is selected then only specifically defined
@@ -48,7 +48,7 @@ namespace JCOM.Serializer.Attributes
         /// of JCOMMemberSelectionAttribute.
         /// </summary>
         /// <param name="selection"></param>
-        public JCOMMemberSelectionAttribute(JCOMMemberSelectionType selection = JCOMMemberSelectionType.Properties)
+        public JMemberSelectionAttribute(JCOMMemberSelectionType selection = JCOMMemberSelectionType.Properties)
         {
             Selection = selection;
         }

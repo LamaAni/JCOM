@@ -28,10 +28,10 @@ namespace Tester.Serialization
         public int NestLevel { get; private set; }
         public string RandomString { get; private set; }
 
-        [JCOMMember]
+        [JMember]
         private PostDeserialize<JsonPartialLoadNestedObject> m_internal;
 
-        [JCOMIgnore]
+        [JIgnoreAttribute]
         /// <summary>
         /// A post deserialzed internal
         /// </summary>
